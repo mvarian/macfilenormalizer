@@ -73,15 +73,15 @@ function cleanSpecialNames($value) {
     $text = $value;
 
     // Single letters
-    $text = preg_replace("/[∂άαáàâãªä]/u",      "a", $text);
-    $text = preg_replace("/[∆лДΛдАÁÀÂÃÄ]/u",     "A", $text);
+    $text = preg_replace("/[∂άαáàâãªäáãà]/u",      "a", $text);
+    $text = preg_replace("/[∆лДΛдАÁÀÂÃÄÁÃÀ]/u",     "A", $text);
     $text = preg_replace("/[ЂЪЬБъь]/u",           "b", $text);
     $text = preg_replace("/[βвВ]/u",            "B", $text);
-    $text = preg_replace("/[çς©с]/u",            "c", $text);
-    $text = preg_replace("/[ÇС]/u",              "C", $text);        
+    $text = preg_replace("/[çς©сç]/u",            "c", $text);
+    $text = preg_replace("/[ÇСÇ]/u",              "C", $text);        
     $text = preg_replace("/[δ]/u",             "d", $text);
-    $text = preg_replace("/[éèêëέëèεе℮ёєэЭ]/u", "e", $text);
-    $text = preg_replace("/[ÉÈÊË€ξЄ€Е∑]/u",     "E", $text);
+    $text = preg_replace("/[éèêëέëèεе℮ёєэЭé]/u", "e", $text);
+    $text = preg_replace("/[ÉÈÊË€ξЄ€Е∑É]/u",     "E", $text);
     $text = preg_replace("/[₣]/u",               "F", $text);
     $text = preg_replace("/[НнЊњ]/u",           "H", $text);
     $text = preg_replace("/[ђћЋ]/u",            "h", $text);
@@ -94,8 +94,8 @@ function cleanSpecialNames($value) {
     $text = preg_replace("/[Мм]/u",             "M", $text);
     $text = preg_replace("/[ñηήηπⁿ]/u",            "n", $text);
     $text = preg_replace("/[Ñ∏пПИЙийΝЛ]/u",       "N", $text);
-    $text = preg_replace("/[óòôõºöοФσόо]/u", "o", $text);
-    $text = preg_replace("/[ÓÒÔÕÖθΩθОΩ]/u",     "O", $text);
+    $text = preg_replace("/[óòôõºöοФσόоó]/u", "o", $text);
+    $text = preg_replace("/[ÓÒÔÕÖθΩθОΩÓ]/u",     "O", $text);
     $text = preg_replace("/[ρφрРф]/u",          "p", $text);
     $text = preg_replace("/[®яЯ]/u",              "R", $text); 
     $text = preg_replace("/[ГЃгѓ]/u",              "r", $text); 
