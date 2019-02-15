@@ -33,7 +33,7 @@ function findSpecialDirectories($dir) {
 				rename($dir . DIRECTORY_SEPARATOR . $value, $newValue);
 				return true;
 			} else {
-				$subresult = findSpecialFiles($dir . DIRECTORY_SEPARATOR . $value);				
+				$subresult = findSpecialDirectories($dir . DIRECTORY_SEPARATOR . $value);				
 			}
 		} 
 	}  // foreach
@@ -73,20 +73,20 @@ function cleanSpecialNames($value) {
     $text = $value;
 
     // Single letters
-    $text = preg_replace("/[∂άαáàâãªäáãà]/u",      "a", $text);
+    $text = preg_replace("/[∂άαáàâãªäááãàãà]/u",      "a", $text);
     $text = preg_replace("/[∆лДΛдАÁÀÂÃÄÁÃÀ]/u",     "A", $text);
     $text = preg_replace("/[ЂЪЬБъь]/u",           "b", $text);
     $text = preg_replace("/[βвВ]/u",            "B", $text);
     $text = preg_replace("/[çς©сç]/u",            "c", $text);
     $text = preg_replace("/[ÇСÇ]/u",              "C", $text);        
     $text = preg_replace("/[δ]/u",             "d", $text);
-    $text = preg_replace("/[éèêëέëèεе℮ёєэЭé]/u", "e", $text);
+    $text = preg_replace("/[ééèêëέëèεе℮ёєэЭé]/u", "e", $text);
     $text = preg_replace("/[ÉÈÊË€ξЄ€Е∑É]/u",     "E", $text);
     $text = preg_replace("/[₣]/u",               "F", $text);
     $text = preg_replace("/[НнЊњ]/u",           "H", $text);
     $text = preg_replace("/[ђћЋ]/u",            "h", $text);
     $text = preg_replace("/[ÍÌÎÏ]/u",           "I", $text);
-    $text = preg_replace("/[íìîïιίϊі]/u",       "i", $text);
+    $text = preg_replace("/[íìîïιίϊîі]/u",       "i", $text);
     $text = preg_replace("/[Јј]/u",             "j", $text);
     $text = preg_replace("/[ΚЌК]/u",            'K', $text);
     $text = preg_replace("/[ќк]/u",             'k', $text);
